@@ -1,2 +1,3 @@
 .env
+authsecret.json
 /node_modules

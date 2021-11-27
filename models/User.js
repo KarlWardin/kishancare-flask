@@ -4,7 +4,7 @@ const Schema=mongoose.Schema;
 
 const userSchema= mongoose.Schema(
     {
-        name:{
+        username:{
             type: String,
             minLength: 6,
             maxLength:30,
@@ -20,7 +20,7 @@ const userSchema= mongoose.Schema(
             required:true,
             unique:true
         },
-        photos:{
+        photo:{
             type:String,
             required:true
         },
