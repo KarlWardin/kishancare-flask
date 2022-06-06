@@ -8,7 +8,7 @@ import torch
 import pandas as pd
 import json
 import requests
-from flask_cors import CORS, cross_origin
+#from flask_cors import CORS, cross_origin
 
 
 
@@ -34,10 +34,14 @@ class Disease:
             sort_keys=True, indent=4)
 
 app = Flask(__name__)
-CORS(app, support_credentials=True)
+#CORS(app, support_credentials=True)
+
+@app.route('/', methods=['GET'])
+def home_view():
+    return "<h1>Hello World!</h1>"
 
 @app.route('/submit', methods=['POST'])
-@cross_origin(supports_credentials=True)
+#@cross_origin(supports_credentials=True)
 def submit():
     image = request.files['file']
     filename = image.filename
